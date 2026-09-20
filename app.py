@@ -1,11 +1,13 @@
 import streamlit as st
 from dotenv import load_dotenv
 
+from src.task10_generation import generate_with_citation
+
 
 load_dotenv()
 
 st.set_page_config(
-    page_title="RAG Chatbot",
+    page_title="VinUni Scholarship Chatbot",
     page_icon="",
     layout="wide",
 )
@@ -14,19 +16,42 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 with st.sidebar:
-    st.title("RAG Chatbot")
-    st.caption("Thay mô tả theo đề tài của nhóm")
+    st.title("VinUni Scholarship Chatbot")
+    st.caption("Hỏi đáp về học bổng & hỗ trợ tài chính VinUniversity")
     top_k = st.slider("Số chunks", 3, 10, 5)
 
-st.title("RAG Chatbot")
-st.caption("Thay tiêu đề và hướng dẫn sử dụng")
+st.title("VinUni Scholarship Chatbot")
+st.caption(
+    "Trả lời dựa trên tài liệu chính sách và tin tức học bổng VinUniversity đã thu thập. "
+    "Mọi câu trả lời đều kèm nguồn trích dẫn."
+)
+
+
+def render_sources(sources: list[dict]) -> None:
+    if not sources:
+        return
+    with st.expander(f"Nguồn tham khảo ({len(sources)})"):
+        for index, source in enumerate(sources, 1):
+            metadata = source.get("metadata", {})
+            title = metadata.get("title") or metadata.get("source") or source.get("id")
+            file_source = metadata.get("source", "unknown")
+            method = source.get("retrieval_method", "unknown")
+            score = source.get("score", 0.0)
+            st.markdown(
+                f"**{index}. {title}** — `{file_source}` "
+                f"(method: `{method}`, score: `{score:.3f}`)"
+            )
+            preview = (source.get("content") or "")[:300].replace("\n", " ")
+            st.caption(preview + ("..." if len(source.get("content") or "") > 300 else ""))
+
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
-        # TODO: Hiển thị sources và retrieval score.
+        if message["role"] == "assistant":
+            render_sources(message.get("sources", []))
 
-query = st.chat_input("Nhập câu hỏi...")
+query = st.chat_input("Nhập câu hỏi về học bổng VinUni...")
 
 if query:
     st.session_state.messages.append({"role": "user", "content": query})
@@ -35,11 +60,14 @@ if query:
         st.markdown(query)
 
     with st.chat_message("assistant"):
-        # TODO: Gọi generate_with_citation(query, top_k).
-        answer = "TODO: Itegration RAG Pipeline hêre"
-        sources = []
+        with st.spinner("Đang tìm kiếm và tạo câu trả lời..."):
+            result = generate_with_citation(query, top_k=top_k)
+        answer = result["answer"]
+        sources = result["sources"]
         st.markdown(answer)
+        st.caption(f"retrieval_source: `{result['retrieval_source']}`")
+        render_sources(sources)
 
-        # TODO: Hiển thị sources và citation.
-
-    # TODO: Lưu answer và sources vào session state.
+    st.session_state.messages.append(
+        {"role": "assistant", "content": answer, "sources": sources}
+    )

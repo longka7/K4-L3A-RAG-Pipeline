@@ -71,15 +71,21 @@ EMBEDDING_DIM = 1024
 COLLECTION_NAME = "rag_documents"
 
 
+_embedding_model = None
+
+
 def embed_texts(texts: list[str]) -> list[list[float]]:
     """Embed danh sách text bằng cùng model dùng cho dense retrieval."""
+    global _embedding_model
     if not texts:
         return []
 
-    from sentence_transformers import SentenceTransformer
+    if _embedding_model is None:
+        from sentence_transformers import SentenceTransformer
 
-    model = SentenceTransformer(EMBEDDING_MODEL)
-    embeddings = model.encode(texts, convert_to_numpy=True)
+        _embedding_model = SentenceTransformer(EMBEDDING_MODEL)
+
+    embeddings = _embedding_model.encode(texts, convert_to_numpy=True)
     return embeddings.tolist()
 
 
