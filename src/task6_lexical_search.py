@@ -26,7 +26,10 @@ def _corpus_from_vectorstore() -> list[dict]:
     metadatas = response.get("metadatas") or []
     corpus = []
     for item_id, content, metadata in zip(ids, documents, metadatas):
-        item = {"id": item_id, "content": content, "metadata": metadata}
+        # ChromaDB silently drops metadata keys whose value is None (e.g. url)
+        # on upsert/read-back, so restore them before validating the contract.
+        normalized_metadata = {"url": None, **metadata}
+        item = {"id": item_id, "content": content, "metadata": normalized_metadata}
         validate_document(item, require_chunk=True)
         corpus.append(item)
     return corpus

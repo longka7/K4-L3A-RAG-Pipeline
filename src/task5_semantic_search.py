@@ -27,11 +27,14 @@ def semantic_search(query: str, top_k: int = 10) -> list[dict]:
         response.get("metadatas", [[]])[0],
         response.get("distances", [[]])[0],
     ):
+        # ChromaDB silently drops metadata keys whose value is None (e.g. url)
+        # on upsert/read-back, so restore them before returning the result.
+        normalized_metadata = {"url": None, **metadata}
         results.append({
             "id": item_id,
             "content": content,
             "score": max(0.0, 1.0 - float(distance)),
-            "metadata": metadata,
+            "metadata": normalized_metadata,
             "retrieval_method": "dense",
         })
 
