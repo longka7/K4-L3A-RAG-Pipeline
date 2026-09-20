@@ -7,15 +7,15 @@
 
 ## Dữ liệu
 
-Đã có sẵn 8 file markdown về học bổng/hỗ trợ tài chính VinUni (cào từ `admissions.vinuni.edu.vn` hôm trước), để sẵn ở `data/standardized/legal/` làm điểm khởi đầu.
+**Task 1, 2, 3 đã hoàn thành** (xong bởi Nguyễn Long Khánh, đã push lên fork):
 
-**Còn thiếu — người phụ trách Task 1–2 cần bổ sung:**
-
-| Yêu cầu | Trạng thái | Việc cần làm |
+| Yêu cầu | Trạng thái | Chi tiết |
 |---|---|---|
-| Task 1: ≥3 tài liệu **PDF/DOCX** chính sách | Chưa đủ | 8 file hiện có là cào từ trang web (HTML → markdown), không phải file PDF/DOCX gốc. Cần tìm thêm bản PDF chính thức (VD "Quy chế học bổng", "Sổ tay sinh viên") — hoặc cả nhóm thống nhất dùng 8 trang web này làm nguồn "legal" và báo lại với giảng viên để chắc chắn được chấp nhận. |
-| Task 2: ≥5 bài **news** (tin tức/thông báo) | Chưa có | 8 file hiện có đều là trang policy/FAQ tĩnh, không phải "news". Cần crawl mới: tin/thông báo học bổng theo đợt, phỏng vấn sinh viên nhận học bổng, v.v. |
-| Task 3: convert sang markdown chuẩn | Cần xử lý thêm | 8 file hiện có dùng front-matter kiểu khác (`audience`, `department`...) so với schema Day 8 (`source/title/doc_type/url`). Người làm Task 3/4 cần quyết định giữ hay bỏ phần front-matter này khi viết `load_documents()`. |
+| Task 1: ≥3 tài liệu **PDF/DOCX** chính sách | ✅ Xong (3 file, `data/landing/legal/`) | Tải trực tiếp từ nguồn chính thức VinUni: `vingroup-scholarship-call-for-applications-2023-2025.pdf`, `conditions-to-retain-scholarship-2021.pdf`, `guideline-student-financial-support-request-2025.pdf` (đều từ `vinuni.edu.vn`/`policy.vinuni.edu.vn`, có text layer đọc được — 1 file khác bị loại vì là bản scan không có text). |
+| Task 2: ≥5 bài **news** | ✅ Xong (6 file JSON, `data/landing/news/`) | Cào thủ công qua trình duyệt thật (site chính có WAF chặn request tự động) từ `vinuni.edu.vn/news-events/` và `scholarships.vinuni.edu.vn/news/`: tin học bổng SEED 2026, câu chuyện SV nhận học bổng, thông báo học bổng PhD CS, cảnh báo lừa đảo mạo danh học bổng, lễ trao học bổng 2023, học bổng ĐH Sydney. |
+| Task 3: convert sang markdown chuẩn | ✅ Xong (`python -m src.task3_convert_markdown`) | `data/standardized/legal/` có 11 file (3 từ PDF mới convert bằng MarkItDown + 8 file học bổng cào từ Day 7 để làm giàu corpus), `data/standardized/news/` có 6 file. Toàn bộ 3 test liên quan trong `tests/test_acceptance.py` đã pass. |
+
+Người phụ trách Task 4 (Indexing) có thể bắt đầu ngay trên `data/standardized/` — không cần chờ gì thêm.
 
 ---
 
@@ -34,7 +34,7 @@ Phần README + individual reports (5đ) là việc chung — nhóm trưởng t�
 - Người 1 (Data) phối hợp viết 15 câu golden Q&A cùng Người 4 — vì Người 1 hiểu corpus nhất (bớt việc cho Người 4).
 - Người 2 và Người 3, sau khi xong Task 5–9, phụ Người 4 nối `retrieve()`/`generate_with_citation()` vào `app.py` thay vì để một mình Người 4 làm toàn bộ Streamlit UI.
 
-**Thứ tự phụ thuộc:** Người 2/3 cần ít nhất vài chunk mẫu từ Người 1 để test sớm (không cần đợi đủ 3 PDF + 5 news — dùng tạm 8 file học bổng đã có ở `data/standardized/legal/` để code trước). Người 4 code Task 10/`app.py` dựa trên schema `SearchResult` cố định sẵn trong `src/contracts.py`, không cần đợi Người 2/3 xong hẳn mới bắt đầu — có thể mock `retrieve()` tạm thời.
+**Thứ tự phụ thuộc:** dữ liệu (Task 1-3) đã xong nên Người 2/3 có thể bắt đầu ngay trên `data/standardized/` thật, không cần chunk mẫu/mock nữa. Người 4 vẫn có thể code Task 10/`app.py` song song dựa trên schema `SearchResult` cố định sẵn trong `src/contracts.py` (mock `retrieve()` tạm nếu Task 9 chưa xong) mà không cần đợi Người 2/3 hoàn thiện hẳn.
 
 ---
 
