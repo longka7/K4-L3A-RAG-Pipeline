@@ -29,7 +29,7 @@ LLM_MODEL = os.getenv("LLM_MODEL", "")
 
 DEFAULT_MODELS = {
     "openai": "gpt-4o-mini",
-    "gemini": "gemini-2.0-flash",
+    "gemini": "gemini-3.6-flash",
     "anthropic": "claude-3-5-haiku-20241022",
 }
 
