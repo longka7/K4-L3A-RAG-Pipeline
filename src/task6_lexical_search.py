@@ -26,6 +26,7 @@ def _corpus_from_vectorstore() -> list[dict]:
     metadatas = response.get("metadatas") or []
     corpus = []
     for item_id, content, metadata in zip(ids, documents, metadatas):
+        metadata = {**(metadata or {}), "url": (metadata or {}).get("url")}
         item = {"id": item_id, "content": content, "metadata": metadata}
         validate_document(item, require_chunk=True)
         corpus.append(item)

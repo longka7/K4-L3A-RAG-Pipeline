@@ -1,0 +1,110 @@
+[
+    {
+        "question": "What does the President's Excellence Scholarship at VinUniversity cover?",
+        "expected_answer": "It is a full-ride scholarship that covers 100% of tuition and living expenses.",
+        "expected_context": "President's Excellence Scholarship: Full-ride scholarship (Covers 100% of tuition and living expenses).",
+        "source_file": "legal/undergrad-scholarships-overview.md"
+    },
+    {
+        "question": "What is the interest rate for VinUniversity's student loan program in the first 4 years?",
+        "expected_answer": "A fixed preferential interest rate of only 8% per year for the first 4 years; for certain special cases the university may provide additional support bringing it as low as 4% per year for up to 4 years.",
+        "expected_context": "Fixed preferential interest rate of only 8%/year for the first 4 years (for certain special cases, VinUni may provide additional interest support, allowing students to pay as low as 4%/year for up to 4 years, depending on the university's evaluation criteria and available support budget).",
+        "source_file": "legal/student-loans.md"
+    },
+    {
+        "question": "Does the VinUniversity student loan require collateral, and what is the maximum loan term?",
+        "expected_answer": "No collateral is required, and the loan term is up to 10 years.",
+        "expected_context": "No collateral required. Loan term up to 10 years.",
+        "source_file": "legal/student-loans.md"
+    },
+    {
+        "question": "What is the monthly deadline to submit a Need-based Financial Aid application, and when are results announced?",
+        "expected_answer": "Applications must be submitted no later than 11:59 PM on the 15th of the previous month, and results are announced on the 15th of each month.",
+        "expected_context": "Submit the Financial Aid application no later than 11:59 PM on the 15th of the previous month. Financial Aid results are announced on the 15th of each month.",
+        "source_file": "legal/need-based-financial-aid.md"
+    },
+    {
+        "question": "What financial support does VinUniversity's PhD in Computer Science program provide to admitted students?",
+        "expected_answer": "Full scholarships (100% of tuition) for all exceptional candidates, along with a stipend of 10,000 USD per year for those serving as Research Assistants or Teaching Assistants; full scholarships also cover living expenses, health insurance, and travel costs.",
+        "expected_context": "Full scholarships (100%) for all exceptional candidates admitted to the program, along with a stipend of 10,000 USD per year for those serving as Research Assistants or Teaching Assistants.",
+        "source_file": "legal/phd-cs-scholarship.md"
+    },
+    {
+        "question": "What is the WIT (Woman in Tech) Scholarship at VinUniversity?",
+        "expected_answer": "A stackable special encouragement scholarship that provides an additional 5% tuition support for female applicants pursuing studies in technology or science-related fields.",
+        "expected_context": "WIT (Woman in Tech) Scholarship: Provides an additional 5% tuition support for female applicants pursuing studies in technology or science-related fields.",
+        "source_file": "legal/undergrad-scholarships-overview.md"
+    },
+    {
+        "question": "According to VinUniversity's fraud alert, what is the only official email address the Vingroup Scholarship Program uses to communicate with applicants?",
+        "expected_answer": "scholarships@vingroup.net. The program does not communicate via Gmail, Yahoo, or other external email platforms.",
+        "expected_context": "Emails are only sent from the program's official email address: scholarships@vingroup.net. The program does not use any other email addresses, nor does it communicate via Gmail, Yahoo, or other external platforms.",
+        "source_file": "news/article_04.md"
+    },
+    {
+        "question": "How many VinUni students were awarded the 2026 Canada-ASEAN SEED Scholarship, and which Canadian universities will they attend?",
+        "expected_answer": "10 students were awarded the 2026 SEED Scholarship, attending the University of Toronto (3), Queen's University (2), Polytechnique Montreal (4), and York University (1).",
+        "expected_context": "This year, 10 VinUni students have been awarded the Canada-ASEAN Scholarships and Educational Exchanges for Development (SEED) 2026. University of Toronto: 3 students, Queen's University: 2 students, Polytechnique Montreal: 4 students, York University: 1 student.",
+        "source_file": "news/article_01.md"
+    },
+    {
+        "question": "How long is Financial Support typically awarded for at VinUniversity, and what must a student do to renew it?",
+        "expected_answer": "Financial support is awarded for one regular semester, one academic year, or as a one-time aid unless otherwise specified. To renew, students must submit a renewal application by the defined deadline along with updated financial documentation.",
+        "expected_context": "Financial support is awarded for one regular semester or one academic year or as a one-time aid unless otherwise specified. Students wishing to renew their support for the next semester or academic year must submit a renewal application by the defined deadline along with updated financial documentation.",
+        "source_file": "legal/guideline-student-financial-support-request-2025.md"
+    },
+    {
+        "question": "What percentage of tuition does the VinUniversity MBA scholarship cover?",
+        "expected_answer": "Scholarships ranging from 50% to 100% of tuition fees for all outstanding candidates admitted to the program (policy applies to the 2024 academic year).",
+        "expected_context": "Scholarships ranging from 50% to 100% for all outstanding candidates admitted to the program.",
+        "source_file": "legal/mba-scholarship.md"
+    },
+    {
+        "question": "What tuition subsidy does every VinUniversity student receive from 2025 to 2030?",
+        "expected_answer": "All students enrolling at VinUniversity from 2025 to 2030 will be granted a 35% tuition subsidy, applied for the full duration of their studies.",
+        "expected_context": "From 2025 to 2030, all students enrolling at VinUniversity will be granted a 35% tuition subsidy, applied for the full duration of their studies.",
+        "source_file": "legal/undergrad-scholarships-overview.md"
+    },
+    {
+        "question": "What minimum GPA level must a 100% or Full Scholarship student maintain to automatically retain their scholarship at VinUniversity?",
+        "expected_answer": "At least the 'Very Good' level, which corresponds to a GPA of at least 3.20 (on the 4.00 MOET scale).",
+        "expected_context": "The Scholarship will be automatically renewed if the student ensures that his/her academic performance achieves at least the Very Good level (for 100% and Full Scholarship). Very good: From 3.20 to 3.59.",
+        "source_file": "legal/conditions-to-retain-scholarship-2021.md"
+    },
+    {
+        "question": "What does the Vingroup Science & Technology Scholarship Program for Overseas Study fully cover for recipients?",
+        "expected_answer": "Tuition and fees, a monthly living stipend/salary, round-trip travel allowance, one-time visa application fee, student health insurance, and one-time settling-in and reintegration allowances.",
+        "expected_context": "Each scholarship will fully cover the following expenses: 1. Tuition and fees. 2. Monthly stipend/Monthly salary. 3. Travelling Allowance. 4. Visa. 5. Student health insurance. 6. One-time allowances: Including settling-in allowance and reintegration allowance after graduation and return to Vietnam.",
+        "source_file": "legal/vingroup-scholarship-call-for-applications-2023-2025.md"
+    },
+    {
+        "question": "What is the minimum IELTS score required to apply for the Vingroup Science & Technology Scholarship for Overseas Study?",
+        "expected_answer": "An IELTS Academic score of at least 6.5 (or TOEFL iBT of at least 79), unless the applicant holds a degree from an English-speaking country such as Australia, Canada, or the United States.",
+        "expected_context": "Candidates must have IELTS score of at least 6.5. Note: The IELTS certificate must still be valid at the scholarship application deadline. Only the IELTS Academic is accepted.",
+        "source_file": "legal/vingroup-scholarship-call-for-applications-2023-2025.md"
+    },
+    {
+        "question": "What research areas were the 2023 VinUni-affiliated University of Sydney PhD scholars working on?",
+        "expected_answer": "Vehicle localisation and mapping for self-driving cars, diagnosis of frontotemporal dementia (FTD), and novel treatments for squamous cell carcinoma (a type of skin cancer).",
+        "expected_context": "His PhD will focus on facilitating robust vehicle localisation and mapping for different environments. Hiep Do is researching translational clinical outcomes for FTD. Thuy Luong will focus his PhD on the genetic mechanism of squamous cell carcinoma.",
+        "source_file": "news/article_06.md"
+    },
+    {
+        "question": "How many Vingroup Scholars were recognized in Cohort 2023, and how many VinUni students received Vingroup scholarships for the first time that year?",
+        "expected_answer": "40 Vingroup Scholars in total for Cohort 2023, including 10 VinUni students who received Vingroup scholarships for the first time to pursue 3+2 programs at top universities abroad.",
+        "expected_context": "The Vingroup Scholarship Program for Cohort 2023 has identified the 40 Vingroup Scholars. For the first time, 10 VinUni students have been awarded Vingroup scholarships to pursue their 3+2 programs at the world's top leading universities.",
+        "source_file": "news/article_05.md"
+    },
+    {
+        "question": "What English proficiency certificate is required to apply for VinUniversity's PhD in Computer Science program?",
+        "expected_answer": "An IELTS score of 6.5 or higher (or equivalent) within 2 years before enrollment/graduation; candidates with only IELTS 5.5 at admission must supplement a valid 6.5+ certificate within 12 months.",
+        "expected_context": "Possessing an English certificate of IELTS 6.5 or higher (or equivalent) within 2 years (24 months) before the date of enrollment or graduation. At the time of admission: candidates need to have an IELTS of 5.5 or higher. Within 12 months from the admission date: candidates need to supplement a valid IELTS 6.5 or higher certificate.",
+        "source_file": "news/article_03.md"
+    },
+    {
+        "question": "Name at least three financial assistance grants available to currently enrolled VinUni students under the 'Financial Assistance & Grant' category.",
+        "expected_answer": "Examples include Bursary, the (ACCESS) Future Leader Grant, the (SHINE) Student Shine Grant, the (GROW) Research Grant, the Start-up Grant, the Global Exchange Grant, the Student Club Grant, and the Work-study Program.",
+        "expected_context": "I. FINANCIAL ASSISTANCE & GRANT: 1. Bursary, 2. (ACCESS) Future Leader Grant, 3. (SHINE) Student Shine Grant, 4. (BLOOM) Global Horizons Grant, 5. (BLOOM) Local Impact Grant, 6. (FOCUS) Safe Haven Grant, 7. (FOCUS) Food Energizer Fund, 8. (GROW) Research Grant, 9. Start-up Grant, 10. Global Exchange Grant, 11. Student Club Grant, 12. Work-study Program.",
+        "source_file": "legal/current-students-financial-support.md"
+    }
+]

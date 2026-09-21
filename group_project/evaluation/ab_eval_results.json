@@ -1,0 +1,60 @@
+{
+  "selected_indices": [
+    0
+  ],
+  "questions": [
+    "What does the President's Excellence Scholarship at VinUniversity cover?"
+  ],
+  "config_a_dense_only": {
+    "overall": {
+      "faithfulness": NaN,
+      "answer_relevancy": NaN,
+      "context_recall": NaN,
+      "context_precision": NaN
+    },
+    "per_sample": [
+      {
+        "user_input": "What does the President's Excellence Scholarship at VinUniversity cover?",
+        "retrieved_contexts": [
+          "- 100% of students have the opportunity to apply for Vingroup's 1,100 scholarship program to participate in research for 1-2 years at a VinUniversity partner university (covers all fees, tuition, living expenses, health insurance, round-trip airfare).\n- Students are directly guided by leading professors, in the top 2% of most cited professors across all scientific fields, plus co-supervision by world-famous professors from partner universities.",
+          "PROSPECTIVE UNDERGRADUATES\n\nTo further support the mission of nurturing talent, Vingroup, the Founder of VinUniversity, has reaffirmed its unwavering commitment to sustaining the University's Scholarship Fund for future generations of VinUniversity students.\n\nTuition Subsidy\n\nFrom 2025 to 2030, all students enrolling at VinUniversity will be granted a 35% tuition subsidy, applied for the full duration of their studies.\n\nMerit-based Scholarships",
+          "Published December 10, 2025.\n\nCOMMITTED TO NURTURING FUTURE TALENTS WITH A GENEROUS SCHOLARSHIP FUND\n\nFor the academic year 2026-2027, VinUniversity continues to strongly affirm its mission to nurture future talent through a generous scholarship fund, supporting outstanding students in overcoming financial barriers to pursue their dreams and contribute to society.\n\nSCHOLARSHIPS OF UP TO FULL TUITION",
+          "Special Academic Scholarship: Offers a 5% tuition waiver for selected academic disciplines, as designated for each academic year.\nWIT (Woman in Tech) Scholarship: Provides an additional 5% tuition support for female applicants pursuing studies in technology or science-related fields.\nVinschool-VinUni Scholarship: Covers a 5% tuition waiver for Vinschool graduates who are admitted to VinUniversity.\nVingroup Family Scholarship: Available for children of Vingroup employees and executives.",
+          "The Vingroup Science and Technology Scholarship Program for Overseas Study for Master’s and\nDoctoral Degrees (the ‘Scholarship Program’) was established by Vingroup with a mission to\nfind talents and provide them with rewarding opportunities so that they can to lead and advance\nthe development of science and technology in Vietnam in the future. The official information about\nthe  Scholarship  Program  is  available  at  https://scholarships.vinuni.edu.vn/.  The  Scholarship"
+        ],
+        "response": "Theo **Document 1**, không có thông tin cụ thể về **\"President's Excellence Scholarship\"** được nêu rõ trong các đoạn dẫn. Các khẳng định liên quan đến chương trình học bổng của Vingroup tại VinUniversity trong context cung cấp chỉ bao gồm:\n\n- 100% sinh viên có cơ hội tham gia chương trình học bổng 1,100 học bổng của Vingroup (trong đó bao gồm học phí, học phí, chi phí sinh hoạt, bảo hiểm sức khỏe, vé máy bay hai chiều) để tham gia nghiên cứu tại các trường hợp hợp tác của VinUniversity trong 1-2 năm.\n- Sinh viên được hướng dẫn trực tiếp bởi các giáo sư hàng đầu (top 2% các giáo sư được trích dẫn nhiều nhất trên toàn thế giới) và có sự đồng hướng của các giáo sư nổi tiếng từ các trường hợp hợp tác.\n\nKhông có evidence nào trong context đề cập đến **\"President's Excellence Scholarship\"** cụ thể. Vì vậy, không thể xác nhận thông tin này.",
+        "reference": "It is a full-ride scholarship that covers 100% of tuition and living expenses.",
+        "faithfulness": NaN,
+        "answer_relevancy": NaN,
+        "context_recall": NaN,
+        "context_precision": NaN
+      }
+    ]
+  },
+  "config_b_hybrid_rrf": {
+    "overall": {
+      "faithfulness": NaN,
+      "answer_relevancy": NaN,
+      "context_recall": NaN,
+      "context_precision": NaN
+    },
+    "per_sample": [
+      {
+        "user_input": "What does the President's Excellence Scholarship at VinUniversity cover?",
+        "retrieved_contexts": [
+          "MERIT-BASED SCHOLARSHIPS\n\nPresident's Excellence Scholarship: Full-ride scholarship (Covers 100% of tuition and living expenses).\nProvost's Merit Scholarship: Covers 100% of tuition\nDean's Distinction Scholarship: Covers 80% and 90% of tuition.\nDiscipline's Honor Scholarship: Covers 50%, 60%, and 70% of tuition.\n\n(*) Merit-Based Scholarships already include the 35% tuition subsidy.\n\nSPECIAL ENCOURAGEMENT SCHOLARSHIPS (*Stackable):",
+          "PROSPECTIVE UNDERGRADUATES\n\nTo further support the mission of nurturing talent, Vingroup, the Founder of VinUniversity, has reaffirmed its unwavering commitment to sustaining the University's Scholarship Fund for future generations of VinUniversity students.\n\nTuition Subsidy\n\nFrom 2025 to 2030, all students enrolling at VinUniversity will be granted a 35% tuition subsidy, applied for the full duration of their studies.\n\nMerit-based Scholarships",
+          "President's Excellence Scholarship: Full-ride scholarship (Covers 100% of tuition and living expenses).\nProvost's Merit Scholarship: Covers 100% of tuition.\nDean's Distinction Scholarship: Covers 80% or 90% of tuition.\nDiscipline's Honor Scholarship: Covers 50%, 60%, or 70% of tuition.\n\n(*) Merit-Based Scholarships already include the 35% tuition subsidy.",
+          "Dr. Le Mai Lan (Vice Chairwoman of Vingroup, President of VinUniversity) said: \"The future of Vietnam and the future of the world depend on the youth. Vingroup wishes to support and provide opportunities for talented young intellectuals to access the advanced education in the world.\"",
+          "- 100% of students have the opportunity to apply for Vingroup's 1,100 scholarship program to participate in research for 1-2 years at a VinUniversity partner university (covers all fees, tuition, living expenses, health insurance, round-trip airfare).\n- Students are directly guided by leading professors, in the top 2% of most cited professors across all scientific fields, plus co-supervision by world-famous professors from partner universities."
+        ],
+        "response": "The **President's Excellence Scholarship** at VinUniversity covers **100% of tuition and living expenses**, as explicitly stated in:\n\n- **Document 1 & Document 2** (under *MERIT-BASED SCHOLARSHIPS*).\n- **Document 3** (Vingroup’s 1,100 scholarship program for research, which includes full coverage of fees, tuition, and living expenses, implying a similar high-level support for the President’s Excellence Scholarship).",
+        "reference": "It is a full-ride scholarship that covers 100% of tuition and living expenses.",
+        "faithfulness": NaN,
+        "answer_relevancy": NaN,
+        "context_recall": NaN,
+        "context_precision": NaN
+      }
+    ]
+  }
+}
